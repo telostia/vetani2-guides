@@ -19,6 +19,7 @@ cd
 #get wallet files
 wget https://raw.githubusercontent.com/telostia/vetani2-guides/master/wallet/linux/vetani_linux.tar.gz
 tar -xvf vetani_linux.tar.gz
+rm vetani_linux.tar.gz
 chmod +x vetani*
 cp vetani* /usr/local/bin
 ufw allow 1977/tcp
@@ -39,6 +40,6 @@ sudo mkdir /root/.vetani
 printf "addnode=54.149.181.41:38221\naddnode=5.9.180.147:38221\naddnode=74.208.94.204:38221\naddnode=104.207.158.193:38221\naddnode=138.68.165.112:38221\naddnode=54.149.181.41:38221\naddnode=95.179.140.249:38221\naddnode=104.237.149.64:38221\naddnode=185.233.105.172:38221\naddnode=45.76.146.140:38221\naddnode=185.53.191.78:38221\n\nrpcuser=vetani432345$PASSW\nrpcpassword=$PASSW\nrpcport=1977\nrpcallowip=127.0.0.1\ndaemon=1\nlisten=1\nserver=1\nmaxconnections=256\nexternalip=$EXTIP:38221\nmasternode=1\nmasternodeprivkey=$MNKEY" >  /root/.vetani/vetani.conf
 
 
-vetanid
+vetanid -daemon
 watch vetani-cli getinfo
 
