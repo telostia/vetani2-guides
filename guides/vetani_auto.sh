@@ -19,7 +19,7 @@ cd
 #get wallet files
 wget https://raw.githubusercontent.com/telostia/vetani2-guides/master/wallet/linux/vetani_linux.tar.gz
 tar -xvf vetani_linux.tar.gz
-rm vetani_linux.tar.gz
+rm vetani_linux.tar.gz vetani_auto.sh
 chmod +x vetani*
 cp vetani* /usr/local/bin
 ufw allow 1977/tcp
