@@ -18,6 +18,9 @@ find the "VET" folder and double click on it.
 right click on "vetani.conf" and open it with notepad or any text editor.
 When file is loaded, add more nodes by copy and paste this:
 
+* addnode=140.82.11.216:38221
+* addnode=209.250.241.120:38221
+* addnode=185.162.130.170:38221
 * addnode=5.9.180.146:38221
 * addnode=5.9.180.147:38221
 * addnode=74.208.94.204:38221
@@ -40,13 +43,14 @@ now move on to linux vps setup.
 -----------------------
 ### Linux VPS setup
 ----------------------
-Log into your linux Vps and type each commands each number lines:
 
-1. cd
-2. wget https://raw.githubusercontent.com/telostia/vetani2-guides/master/guides/vetani_auto.sh
-3. bash vetani_auto.sh 
+Log into your linux Vps and copy the below lines and press enter:
 
-when asked to paste genekey. right click to paste your genkey in.
+```
+bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/vetani2-guides/master/guides/vetani_auto.sh)"
+```
+
+when asked to paste genkey. right click to paste your genkey in.
 
 
 
