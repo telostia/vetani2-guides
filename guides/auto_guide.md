@@ -44,11 +44,10 @@ now move on to linux vps setup.
 ### Linux VPS setup
 ----------------------
 
-Log into your linux Vps and copy the below lines and press enter:
+Log into your linux Vps and copy the line below and press enter:
 
-```
-bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/vetani2-guides/master/guides/vetani_auto.sh)"
-```
+* cd && bash -c "$(wget -O - https://raw.githubusercontent.com/telostia/vetani2-guides/master/guides/vetani_auto.sh)"
+
 
 when asked to paste genkey. right click to paste your genkey in.
 

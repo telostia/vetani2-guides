@@ -15,8 +15,6 @@ sudo apt-get install libminiupnpc-dev -y
 sudo add-apt-repository ppa:bitcoin/bitcoin -y
 sudo apt-get update -y
 sudo apt-get install libdb4.8-dev libdb4.8++-dev -y
-#get ip lib
-sudo apt install libwww-perl -y
 
 cd
 #get wallet files
@@ -32,7 +30,7 @@ ufw allow 1977/tcp
 echo -e "${GREEN}Now paste your Masternode key by using right mouse click and press ENTER ${NONE}";
 read MNKEY
 
-EXTIP=`lwp-request -o text checkip.dyndns.org | awk '{ print $NF }'`
+EXTIP=`curl -s4 icanhazip.com`
 PASSW=`pwgen -1 20 -n`
 
 echo -e "${GREEN}Preparing config file ${NONE}";
